@@ -33,12 +33,12 @@ easeInOutCirc
 
 */
 
-// let speed = 1000
-// let speedMobile = 1000
-// let easing = easeInOutCirc
-// let offset = 164
-// let offsetMobile = 200
-// let mobileBreakpoint = 768
+let speed = 2500
+let speedMobile = 900
+let easing = easeInOutCubic
+let offset = 70
+let offsetMobile = 40
+let mobileBreakpoint = 768
 
 let scrollAnimationId = null;
 function listenForManualScrollInterrupt() {
@@ -55,6 +55,10 @@ function listenForManualScrollInterrupt() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const easingSelect = document.getElementById('easingSelect');
+  console.log(easingSelect);
+
   function customScrollTo(targetY, duration, easing) {
 
     if (scrollAnimationId !== null) {
